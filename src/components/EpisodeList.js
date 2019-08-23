@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import {Card} from "semantic-ui-react"
 
 export default function EpisodeList() {
   // TODO: Add useState to track data from useEffect
@@ -34,6 +35,7 @@ export default function EpisodeList() {
 function EpisodeDetails({ episode1 }) {
   const { air_date, episode, name} = episode1;
   return (
+    <Card>
       <div className="name">
         <h2>{name}</h2>
         <div className="episode">
@@ -43,5 +45,6 @@ function EpisodeDetails({ episode1 }) {
           Air Date: <h2>{air_date}</h2>
         </div>
       </div>
+    </Card>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import {Card} from "semantic-ui-react"
 
 export default function LocationList() {
   // TODO: Add useState to track data from useEffect
@@ -35,16 +36,18 @@ function LocationDetails({ location }) {
   const { name, dimension, type } = location;
   return (
       <div className="name">
-        <h2>{name}</h2>
-        <div className="dimension">
-          Dimension: <h2>{dimension}</h2>
-        </div>
-        {/* <div className="residents">
-          Number of residents: <h2>{residents.lenth}</h2>
-        </div> */}
-        <div className="type">
-          Type: <h2>{type}</h2>
-        </div>
+          <Card>
+            <h2>{name}</h2>
+            <div className="dimension">
+            Dimension: <h2>{dimension}</h2>
+            </div>
+            {/* <div className="residents">
+            Number of residents: <h2>{residents.lenth}</h2>
+            </div> */}
+            <div className="type">
+            Type: <h2>{type}</h2>
+            </div>
+        </Card>
       </div>
   );
 }
