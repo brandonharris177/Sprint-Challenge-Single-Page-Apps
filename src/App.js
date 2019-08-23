@@ -13,8 +13,7 @@ export default function App() {
     <main>
       <Header />
       <TabNav/>
-      <CharacterList/>
-      <Route exact path = "/" component= {App}/>
+      {/* <Route exact path = "/" component= {App}/> */}
       <Route path = "/character" component = {CharacterList}/>
       <Route path = "/location" component = {LocationsList}/>
       <Route path = "/episode" component = {EpisodeList}/>
